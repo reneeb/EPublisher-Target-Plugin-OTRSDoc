@@ -13,7 +13,7 @@ use EPublisher;
 use EPublisher::Target::Base;
 our @ISA = qw(EPublisher::Target::Base);
 
-our $VERSION = 0.1;
+our $VERSION = 0.2;
 
 sub deploy {
     my ($self) = @_;
@@ -26,7 +26,7 @@ sub deploy {
     
     my @TOC = map{
         (my $name = $_->{title}) =~ s/::/_/g; 
-        join '/', $base_url, lc( $name ) . '.html';
+        { target => join( '/', $base_url, lc( $name ) . '.html'), name => $_->{title} };
     } @{$pods};
     
     my $output = $self->_config->{output};
@@ -36,7 +36,7 @@ sub deploy {
         my $parser = Pod::Simple::XHTML->new;
         $parser->index(0);
         
-        (my $name = $_->{title}) =~ s/::/_/g; 
+        (my $name = $pod->{title}) =~ s/::/_/g; 
                 
         $parser->output_string( \my $xhtml );
         $parser->parse_string_document( $pod->{pod} );
