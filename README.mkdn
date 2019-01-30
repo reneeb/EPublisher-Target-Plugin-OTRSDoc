@@ -1,0 +1,95 @@
+[![Build Status](https://travis-ci.org/reneeb/EPublisher-Target-Plugin-OTRSDoc.svg?branch=master)](https://travis-ci.org/reneeb/EPublisher-Target-Plugin-OTRSDoc)
+[![Kwalitee status](http://cpants.cpanauthors.org/dist/EPublisher-Target-Plugin-OTRSDoc.png)](http://cpants.charsbar.org/dist/overview/EPublisher-Target-Plugin-OTRSDoc)
+[![GitHub issues](https://img.shields.io/github/issues/reneeb/EPublisher-Target-Plugin-OTRSDoc.svg)](https://github.com/reneeb/EPublisher-Target-Plugin-OTRSDoc/issues)
+
+# NAME
+
+EPublisher::Target::Plugin::OTRSDoc - Create HTML version of OTRS documentation
+
+# VERSION
+
+version 0.4
+
+# SYNOPSIS
+
+    use EPublisher::Target;
+    my $EPub = EPublisher::Target->new( { type => 'OTRSDoc' } );
+    $EPub->deploy;
+
+# METHODS
+
+## deploy
+
+creates the output.
+
+    $EPub->deploy;
+
+# YAML SPEC
+
+    EPubTest:
+      source:
+        #...
+      target:
+        type: ÓTRSDoc
+
+# TODO
+
+## document methods
+
+
+
+# Development
+
+The distribution is contained in a Git repository, so simply clone the
+repository
+
+```
+$ git clone http://github.com/reneeb/EPublisher-Target-Plugin-OTRSDoc.git
+```
+
+and change into the newly-created directory.
+
+```
+$ cd EPublisher-Target-Plugin-OTRSDoc
+```
+
+The project uses [`Dist::Zilla`](https://metacpan.org/pod/Dist::Zilla) to
+build the distribution, hence this will need to be installed before
+continuing:
+
+```
+$ cpanm Dist::Zilla
+```
+
+To install the required prequisite packages, run the following set of
+commands:
+
+```
+$ dzil authordeps --missing | cpanm
+$ dzil listdeps --author --missing | cpanm
+```
+
+The distribution can be tested like so:
+
+```
+$ dzil test
+```
+
+To run the full set of tests (including author and release-process tests),
+add the `--author` and `--release` options:
+
+```
+$ dzil test --author --release
+```
+
+# AUTHOR
+
+Renee Bäcker <module@renee-baecker.de>
+
+# COPYRIGHT AND LICENSE
+
+This software is Copyright (c) 2013 by Renee Bäcker.
+
+This is free software, licensed under:
+
+    The Artistic License 2.0 (GPL Compatible)
