@@ -8,7 +8,7 @@ EPublisher::Target::Plugin::OTRSDoc - Create HTML version of OTRS documentation
 
 # VERSION
 
-version 0.4
+version 1.01
 
 # SYNOPSIS
 

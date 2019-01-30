@@ -14,7 +14,7 @@ use EPublisher;
 use EPublisher::Target::Base;
 use parent qw(EPublisher::Target::Base);
 
-our $VERSION = 0.4;
+our $VERSION = 1.01;
 
 sub deploy {
     my ($self, $sources) = @_;
