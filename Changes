@@ -1,0 +1,18 @@
+Revision history for EPublisher::Target::Plugin::OTRSDoc
+========================================================
+
+0.04 2013-07-14 08:39:00
+
+    + remove closing body- and html-tags as those tags should be in the template
+
+0.03 2013-07-14 08:35:00
+
+    + always use lower case file name
+
+0.02 2013-07-12 09:30:00
+
+    + have more information about the TOC
+
+0.01 2013-07-12 08:14:00
+
+    + initial release
